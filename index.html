@@ -15,41 +15,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Libre+Baskerville:wght@400;700&family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-  /* ----------------------------------------------
-     COLOR THEMES
-     ---------------------------------------------- */
-
+  /**************************************
+      COLOR THEMES
+  **************************************/
   :root{
-    /* Soft, deeper night version (used when .light is NOT present) */
     --bg:#1f1527;
     --panel:#271a32;
     --ink:#f8f4ff;
     --muted:#c5b9d7;
-    --accent:#b589ff;              /* lavender purple */
+    --accent:#b589ff;
     --accent-soft:rgba(181,137,255,.18);
-    --oya:#c66c8c;                  /* soft Oya plum/rose */
-    --gold:#f4c86a;                 /* warm sun-gold */
+    --gold:#f4c86a;
+    --oya:#c66c8c;
     --radius:22px;
     --shadow:0 10px 30px rgba(0,0,0,.40);
   }
 
   :root.light{
-    /* Default spa-like light theme */
-    --bg:#f6f2fb;                   /* lavender mist */
-    --panel:#ffffff;                /* spa white */
-    --ink:#2d2038;                  /* soft plum text */
-    --muted:#7f6b93;                /* gentle mauve */
-    --accent:#9b6bff;               /* feminine purple */
+    --bg:#f6f2fb;
+    --panel:#ffffff;
+    --ink:#2d2038;
+    --muted:#7f6b93;
+    --accent:#9b6bff;
     --accent-soft:rgba(155,107,255,.14);
-    --oya:#c96e93;                  /* Oya wind in rosy plum */
-    --gold:#f5c879;                 /* sunlight gold */
+    --gold:#f5c879;
+    --oya:#c96e93;
     --shadow:0 8px 22px rgba(73,46,107,.12);
   }
 
-  /* ----------------------------------------------
-     BASE GLOBAL
-     ---------------------------------------------- */
-
+  /**************************************
+      BASE
+  **************************************/
   *{box-sizing:border-box}
   body{
     margin:0;
@@ -74,28 +70,24 @@
     border:1px solid rgba(0,0,0,.04);
     transition:.3s ease;
   }
-
   :root:not(.light) .card{
     border:1px solid rgba(255,255,255,.08);
   }
 
-  /* ----------------------------------------------
-     TYPOGRAPHY
-     ---------------------------------------------- */
-
+  /**************************************
+      TYPOGRAPHY
+  **************************************/
   h1,h2,h3{
     font-family:"Libre Baskerville","Noto Serif",serif;
     margin:0 0 .6rem;
   }
-
   h1{font-size: clamp(30px,4.8vw,54px);}
   h2{font-size: clamp(22px,3vw,34px);}
   h3{font-size: clamp(18px,2.1vw,22px);}
+  a{color:var(--accent);}
+  a:hover{text-decoration:underline;}
 
-  a{color:var(--accent); text-decoration:none}
-  a:hover{text-decoration:underline}
-
-  .tiny{font-size:.9rem;color:var(--muted)}
+  .tiny{font-size:.9rem;color:var(--muted);}
 
   .divider{
     height:1px;
@@ -106,14 +98,13 @@
     background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);
   }
 
-  /* ----------------------------------------------
-     BUTTONS
-     ---------------------------------------------- */
-
+  /**************************************
+      BUTTONS
+  **************************************/
   .btn{
     display:inline-flex;align-items:center;justify-content:center;
     padding:.9rem 1.2rem;border-radius:14px;
-    font-weight:800;border:1px solid rgba(0,0,0,.05);
+    font-weight:800;border:1px solid rgba(0,0,0,.06);
     cursor:pointer;text-decoration:none;transition:.12s ease;
     font-size:.95rem;
   }
@@ -129,14 +120,12 @@
   }
   :root:not(.light) .btn-ghost{
     background:rgba(255,255,255,.08);
-    color:var(--ink);
     border-color:rgba(255,255,255,.18);
   }
 
-  /* ----------------------------------------------
-     GRID
-     ---------------------------------------------- */
-
+  /**************************************
+      GRID
+  **************************************/
   .grid{display:grid;gap:18px}
   .g-3{grid-template-columns:repeat(3,1fr)}
   .g-2{grid-template-columns:repeat(2,1fr)}
@@ -144,9 +133,9 @@
     .g-3,.g-2{grid-template-columns:1fr}
   }
 
-  /* ----------------------------------------------
-     PORTRAIT
-     ---------------------------------------------- */
+  /**************************************
+      PORTRAIT
+  **************************************/
   .portrait{
     width:100%;border-radius:var(--radius);
     aspect-ratio:5/6;object-fit:cover;
@@ -156,9 +145,9 @@
     border:1px solid rgba(255,255,255,.12);
   }
 
-  /* ----------------------------------------------
-     LOGO
-     ---------------------------------------------- */
+  /**************************************
+      LOGO
+  **************************************/
   .logo{
     width:82px;height:82px;border-radius:50%;
     background:
@@ -170,10 +159,9 @@
     letter-spacing:1px;
   }
 
-  /* ----------------------------------------------
-     THEME TOGGLE BUTTON
-     ---------------------------------------------- */
-
+  /**************************************
+      THEME TOGGLE
+  **************************************/
   .theme-toggle{
     cursor:pointer;
     padding:.5rem .9rem;
@@ -184,17 +172,12 @@
     font-weight:600;
     display:inline-flex;
     align-items:center;
-    gap:.35rem;
   }
   :root:not(.light) .theme-toggle{
     background:rgba(0,0,0,.18);
     border:1px solid rgba(255,255,255,.22);
     color:var(--ink);
   }
-
-  /* ----------------------------------------------
-     FORM FIELDS
-     ---------------------------------------------- */
 
   .field{
     width:100%;
@@ -203,27 +186,23 @@
     border:1px solid rgba(0,0,0,.08);
     background:#f5f0fb;
     color:var(--ink);
-    font:inherit;
+  }
+  :root:not(.light) .field{
+    background:#1e1428;
+    border-color:rgba(255,255,255,.14);
   }
   .field:focus{
     outline:none;
     border-color:var(--accent);
     box-shadow:0 0 0 2px var(--accent-soft);
   }
-  :root:not(.light) .field{
-    background:#1e1428;
-    border-color:rgba(255,255,255,.14);
-  }
 
-  /* ----------------------------------------------
-     HERO LAYOUT
-     ---------------------------------------------- */
-
+  /**************************************
+      HERO
+  **************************************/
   .hero{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:26px;
-    align-items:center;
+    display:grid;grid-template-columns:1.1fr .9fr;
+    gap:26px;align-items:center;
   }
   @media(max-width:900px){
     .hero{grid-template-columns:1fr}
@@ -236,8 +215,7 @@
 <header class="wrap">
   <nav class="card" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
     
-    <!-- Left: Logo + Name -->
-    <div style="display:flex; align-items:center; gap:14px; min-width:220px;">
+    <div style="display:flex; align-items:center; gap:14px;">
       <div class="logo">QM</div>
       <div>
         <strong style="font-size:1.15rem;">Queen Mother Maat</strong><br>
@@ -245,13 +223,12 @@
       </div>
     </div>
 
-    <!-- Right: Nav Links -->
-    <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
       <a class="btn btn-ghost" href="#offerings">Offerings</a>
       <a class="btn btn-ghost" href="#credentials">Credentials</a>
       <a class="btn btn-ghost" href="#downloads">Meditation Downloads</a>
       <a class="btn btn-ghost" href="#contact">Contact</a>
-      <a class="btn btn-primary" href="mailto:iya@qmmaat.com?subject=Book%20a%20Session">Book Session</a>
+      <a class="btn btn-primary" href="mailto:iya@qmmaat.com">Book Session</a>
       <button class="theme-toggle" id="themeToggle">
         <span id="themeIcon">?</span> Light / Dark
       </button>
@@ -263,11 +240,11 @@
 
 <main class="wrap">
 
-  <!-- HERO -->
+  <!-- HERO ------------------------------------------------ -->
   <section class="hero">
     <div class="card">
       <h1>Soft Breath. Gentle Wind. <span style="color:var(--gold)">Maat</span> in Balance.</h1>
-      <p>Queen Mother Maat is a <strong> Khemetian Yoga</strong> instructor and <strong>Priestess of Oya</strong>, guiding soft yet powerful practices of breath, movement, and meditation for clarity, nervous-system calm, and feminine spiritual alignment.</p>
+      <p>Queen Mother Maat is a <strong>Master Khemetian Yoga</strong> instructor and <strong>Priestess of Oya</strong>, guiding soft transformational breathwork, meditation, posture, and energetic balance for women, families, and spiritual seekers.</p>
 
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;">
         <a class="btn btn-primary" href="mailto:iya@qmmaat.com?subject=Breathwork%20Session">Book Breathwork</a>
@@ -286,53 +263,56 @@
   </section>
 
 
-  <!-- OFFERINGS -->
+
+  <!-- OFFERINGS ------------------------------------------------ -->
   <section id="offerings" style="padding:18px 0 10px;">
     <div class="grid g-3">
       <div class="card">
         <h3>Guided Breathwork</h3>
-        <p>Soft, structured breath sequences that soothe the nervous system and open spacious clarity.</p>
+        <p>Soft but powerful breath sequences that soothe the nervous system and open intuitive clarity.</p>
         <ul>
-          <li>60–75 min private session</li>
-          <li>Gentle, trauma-sensitive pacing</li>
-          <li>Personal practice plan to continue at home</li>
+          <li>60–75 min private sessions</li>
+          <li>Gentle, trauma-aware pacing</li>
+          <li>Personal practice plan</li>
         </ul>
       </div>
 
       <div class="card">
         <h3>Meditation & Visualization</h3>
-        <p>Ma’at-centered visualization and stillness practices for balance, focus, and inner listening.</p>
+        <p>Ma’at-centered grounding, visualization, and quiet-mind practices for balance and alignment.</p>
         <ul>
-          <li>Grounding & centering meditations</li>
-          <li>Purpose & creative-flow journeys</li>
-          <li>Group circles & ceremonial spaces</li>
+          <li>Grounding & centering</li>
+          <li>Purpose & creative flow</li>
+          <li>Group circles & ceremony</li>
         </ul>
       </div>
 
       <div class="card">
         <h3>Khemetian Yoga</h3>
-        <p>Geometric postures blended with breath and subtle movement to clear stagnation and restore alignment.</p>
+        <p>Geometric postures paired with breath, opening energy flow and restoring inner poise.</p>
         <ul>
           <li>All levels welcome</li>
           <li>Virtual or in-person</li>
-          <li>Workshops, retreats, and immersions</li>
+          <li>Workshops & retreats</li>
         </ul>
       </div>
     </div>
   </section>
 
+
   <div class="divider"></div>
 
 
-  <!-- CREDENTIALS -->
+
+  <!-- CREDENTIALS -------------------------------------------- -->
   <section id="credentials" style="padding:18px 0 10px;">
     <div class="grid g-2">
       <div class="card">
         <h2>Credentials & Training</h2>
         <ul>
-          <li>Degrees & Certifications in natural health & integrative nutrition</li>
+          <li>Degrees & Certifications in Natural Health & Integrative Nutrition</li>
           <li>American Association of Drugless Practitioners — Commission on Certification</li>
-          <li>Experienced Khemetian Yoga Instructor with years of teaching in community and private settings</li>
+          <li>Khemetian Yoga Instructor with years of teaching in community and private settings</li>
         </ul>
       </div>
 
@@ -340,37 +320,67 @@
         <h3>Focus Areas</h3>
         <ul>
           <li>Nervous-system healing & breath retraining</li>
-          <li>Trauma-sensitive grounding & somatic awareness</li>
-          <li>Khemetian postural geometry & energetic hygiene</li>
-          <li>Sound, drum, mantra, and gentle ritual elements</li>
+          <li>Trauma-sensitive grounding</li>
+          <li>Khemetian postural geometry</li>
+          <li>Sound, drum, mantra & gentle ritual elements</li>
         </ul>
       </div>
     </div>
   </section>
 
+
   <div class="divider"></div>
 
 
-  <!-- MEDITATION DOWNLOADS -->
+
+  <!-- MEDITATION DOWNLOADS ------------------------------------ -->
   <section id="downloads" style="padding:18px 0 10px;">
     <div class="card">
       <h2>Meditation Downloads</h2>
-      <p>Audio meditations you can return to as daily anchors for grounding, balance, and Oya-guided transformation.</p>
+      <p>Downloadable meditations for grounding, gentle transformation, feminine balance, and Orisha connection.</p>
 
       <ul>
-        <li><a href="downloads/grounding-meditation.mp3" download>Grounding into Maat — 12 min (MP3)</a></li>
-        <li><a href="downloads/maatic-balance.mp3" download>Ma’at Balance & Heart Lightness — 18 min (MP3)</a></li>
-        <li><a href="downloads/oya-wind-release.mp3" download>Oya Wind Release & Clearing — 15 min (MP3)</a></li>
+        <li>
+          <a href="https://drive.google.com/file/d/1JwdHv6Yw2xOU3ByVYkdoqIHSxJtkkuJG/view?usp=drive_link" target="_blank">
+            Yemojá Meditation — Water, Peace & Emotional Flow
+          </a>
+        </li>
+
+        <li>
+          <a href="https://drive.google.com/file/d/1TCJrh15RoZGXjxWAVpqvTYpQ8gJh36AR/view?usp=drive_link" target="_blank">
+            Butterfly Transformation Meditation — Renewal & Lightness
+          </a>
+        </li>
+
+        <li>
+          <a href="https://drive.google.com/file/d/1TTks12k0yRGHMyZOW1aWGOGOl-Vd0GfM/view?usp=drive_link" target="_blank">
+            Shango Meditation — Strength, Rhythm & Inner Fire
+          </a>
+        </li>
+
+        <li>
+          <a href="https://drive.google.com/file/d/1-RuIadxigTT9CRP1CMUGiAtCH1Wc_t0I/view?usp=drive_link" target="_blank">
+            Ilèkè Meditation — Adornment, Protection & Spiritual Grace
+          </a>
+        </li>
+
+        <li>
+          <a href="https://drive.google.com/file/d/1h4r4ifs3WIo8H_6azkwdcsuKE2pR5apX/view?usp=drive_link" target="_blank">
+            Obatalá Meditation — Clarity, Purity & Cool Mind
+          </a>
+        </li>
       </ul>
 
-      <p class="tiny">Place your MP3 files in a <code>/downloads</code> folder in the same site so these links download directly.</p>
+      <p class="tiny">These meditations open in a new tab. You may download the files directly from Google Drive.</p>
     </div>
   </section>
+
 
   <div class="divider"></div>
 
 
-  <!-- CONTACT -->
+
+  <!-- CONTACT -------------------------------------------------- -->
   <section id="contact" style="padding:18px 0 10px;">
     <div class="grid g-2">
       <div class="card">
@@ -406,6 +416,8 @@
 
 </main>
 
+
+
 <footer class="wrap">
   <div class="divider"></div>
   <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;">
@@ -413,6 +425,7 @@
     <div>Priestess of Oya • Khemetian Yoga • Breathwork & Meditation</div>
   </div>
 </footer>
+
 
 
 <script>
