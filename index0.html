@@ -15,9 +15,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Libre+Baskerville:wght@400;700&family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-  /**************************************
-      COLOR THEMES
-  **************************************/
   :root{
     --bg:#1f1527;
     --panel:#271a32;
@@ -43,9 +40,6 @@
     --shadow:0 8px 22px rgba(73,46,107,.12);
   }
 
-  /**************************************
-      BASE
-  **************************************/
   *{box-sizing:border-box}
   body{
     margin:0;
@@ -56,7 +50,6 @@
       var(--bg);
     color:var(--ink);
     font:400 16px/1.6 Inter,"Noto Sans",system-ui;
-    letter-spacing:.2px;
     transition: background .3s ease, color .3s ease;
   }
 
@@ -67,143 +60,72 @@
     border-radius:var(--radius);
     padding:clamp(18px,3.2vw,28px);
     box-shadow:var(--shadow);
-    border:1px solid rgba(0,0,0,.04);
-    transition:.3s ease;
-  }
-  :root:not(.light) .card{
-    border:1px solid rgba(255,255,255,.08);
   }
 
-  /**************************************
-      TYPOGRAPHY
-  **************************************/
   h1,h2,h3{
     font-family:"Libre Baskerville","Noto Serif",serif;
     margin:0 0 .6rem;
   }
+
   h1{font-size: clamp(30px,4.8vw,54px);}
   h2{font-size: clamp(22px,3vw,34px);}
   h3{font-size: clamp(18px,2.1vw,22px);}
   a{color:var(--accent);}
-  a:hover{text-decoration:underline;}
 
   .tiny{font-size:.9rem;color:var(--muted);}
-
   .divider{
     height:1px;
     background:linear-gradient(90deg,transparent,rgba(45,32,56,.18),transparent);
     margin:32px 0;
   }
-  :root:not(.light) .divider{
-    background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);
-  }
 
-  /**************************************
-      BUTTONS
-  **************************************/
   .btn{
     display:inline-flex;align-items:center;justify-content:center;
     padding:.9rem 1.2rem;border-radius:14px;
-    font-weight:800;border:1px solid rgba(0,0,0,.06);
-    cursor:pointer;text-decoration:none;transition:.12s ease;
-    font-size:.95rem;
+    font-weight:800;cursor:pointer;
+    font-size:.95rem;text-decoration:none;
   }
+
   .btn-primary{
     background:linear-gradient(180deg,var(--gold),#e8af49);
     color:#3b2604;
-    box-shadow:0 8px 18px rgba(229,179,87,.35);
   }
-  .btn-primary:hover{transform:translateY(-2px);}
+
   .btn-ghost{
     background:rgba(255,255,255,.7);
     color:var(--ink);
   }
-  :root:not(.light) .btn-ghost{
-    background:rgba(255,255,255,.08);
-    border-color:rgba(255,255,255,.18);
-  }
 
-  /**************************************
-      GRID
-  **************************************/
   .grid{display:grid;gap:18px}
   .g-3{grid-template-columns:repeat(3,1fr)}
   .g-2{grid-template-columns:repeat(2,1fr)}
+
   @media(max-width:900px){
     .g-3,.g-2{grid-template-columns:1fr}
   }
 
-  /**************************************
-      PORTRAIT
-  **************************************/
   .portrait{
     width:100%;border-radius:var(--radius);
     aspect-ratio:5/6;object-fit:cover;
-    border:1px solid rgba(0,0,0,.04);
-  }
-  :root:not(.light) .portrait{
-    border:1px solid rgba(255,255,255,.12);
   }
 
-  /**************************************
-      LOGO
-  **************************************/
   .logo{
     width:82px;height:82px;border-radius:50%;
-    background:
-      radial-gradient(circle at 30% 20%,rgba(255,255,255,.55),transparent 60%),
-      linear-gradient(135deg,var(--gold),#e09e3b);
+    background:linear-gradient(135deg,var(--gold),#e09e3b);
     display:grid;place-items:center;
-    font-weight:900;color:#3a2607;
-    font-size:1.1rem;
-    letter-spacing:1px;
+    font-weight:900;
   }
 
-  /**************************************
-      THEME TOGGLE
-  **************************************/
   .theme-toggle{
-    cursor:pointer;
-    padding:.5rem .9rem;
-    border-radius:12px;
-    border:1px solid rgba(0,0,0,.08);
-    background:rgba(255,255,255,.85);
-    font-size:.85rem;
-    font-weight:600;
-    display:inline-flex;
-    align-items:center;
-  }
-  :root:not(.light) .theme-toggle{
-    background:rgba(0,0,0,.18);
-    border:1px solid rgba(255,255,255,.22);
-    color:var(--ink);
+    cursor:pointer;padding:.5rem .9rem;
+    border-radius:12px;font-size:.85rem;font-weight:600;
   }
 
-  .field{
-    width:100%;
-    padding:.8rem;
-    border-radius:12px;
-    border:1px solid rgba(0,0,0,.08);
-    background:#f5f0fb;
-    color:var(--ink);
-  }
-  :root:not(.light) .field{
-    background:#1e1428;
-    border-color:rgba(255,255,255,.14);
-  }
-  .field:focus{
-    outline:none;
-    border-color:var(--accent);
-    box-shadow:0 0 0 2px var(--accent-soft);
-  }
-
-  /**************************************
-      HERO
-  **************************************/
   .hero{
     display:grid;grid-template-columns:1.1fr .9fr;
     gap:26px;align-items:center;
   }
+
   @media(max-width:900px){
     .hero{grid-template-columns:1fr}
   }
@@ -229,9 +151,7 @@
       <a class="btn btn-ghost" href="#downloads">Meditation Downloads</a>
       <a class="btn btn-ghost" href="#contact">Contact</a>
       <a class="btn btn-primary" href="mailto:iya@qmmaat.com">Book Session</a>
-      <button class="theme-toggle" id="themeToggle">
-        <span id="themeIcon">?</span> Light / Dark
-      </button>
+      <button class="theme-toggle" id="themeToggle"><span id="themeIcon">☀️</span></button>
     </div>
 
   </nav>
@@ -240,20 +160,16 @@
 
 <main class="wrap">
 
-  <!-- HERO ------------------------------------------------ -->
+  <!-- HERO -->
   <section class="hero">
     <div class="card">
       <h1>Soft Breath. Gentle Wind. <span style="color:var(--gold)">Maat</span> in Balance.</h1>
-      <p>Queen Mother Maat is a <strong>Master Khemetian Yoga</strong> instructor and <strong>Priestess of Oya</strong>, guiding soft transformational breathwork, meditation, posture, and energetic balance for women, families, and spiritual seekers.</p>
+      <p>Queen Mother Maat is a <strong>Master Khemetian Yoga</strong> instructor and <strong>Priestess of Oya</strong>, guiding transformational breathwork, meditation, posture, and energetic balance.</p>
 
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;">
         <a class="btn btn-primary" href="mailto:iya@qmmaat.com?subject=Breathwork%20Session">Book Breathwork</a>
         <a class="btn btn-ghost" href="#offerings">See Offerings</a>
       </div>
-
-      <p class="tiny" style="margin-top:10px">
-        Email: <a href="mailto:iya@qmmaat.com">iya@qmmaat.com</a> • Web: <a href="https://qmmaat.com">qmmaat.com</a>
-      </p>
     </div>
 
     <div class="card">
@@ -264,140 +180,86 @@
 
 
 
-  <!-- OFFERINGS ------------------------------------------------ -->
+  <!-- OFFERINGS -->
   <section id="offerings" style="padding:18px 0 10px;">
     <div class="grid g-3">
       <div class="card">
         <h3>Guided Breathwork</h3>
-        <p>Soft but powerful breath sequences that soothe the nervous system and open intuitive clarity.</p>
-        <ul>
-          <li>60–75 min private sessions</li>
-          <li>Gentle, trauma-aware pacing</li>
-          <li>Personal practice plan</li>
-        </ul>
+        <p>Soft but powerful breath sequences that soothe the nervous system.</p>
       </div>
 
       <div class="card">
         <h3>Meditation & Visualization</h3>
-        <p>Ma’at-centered grounding, visualization, and quiet-mind practices for balance and alignment.</p>
-        <ul>
-          <li>Grounding & centering</li>
-          <li>Purpose & creative flow</li>
-          <li>Group circles & ceremony</li>
-        </ul>
+        <p>Ma’at-centered grounding and intuitive clarity practices.</p>
       </div>
 
       <div class="card">
         <h3>Khemetian Yoga</h3>
-        <p>Geometric postures paired with breath, opening energy flow and restoring inner poise.</p>
-        <ul>
-          <li>All levels welcome</li>
-          <li>Virtual or in-person</li>
-          <li>Workshops & retreats</li>
-        </ul>
+        <p>Geometric postures paired with breath and energetic alignment.</p>
       </div>
     </div>
   </section>
 
-
   <div class="divider"></div>
 
 
-
-  <!-- CREDENTIALS -------------------------------------------- -->
-  <section id="credentials" style="padding:18px 0 10px;">
+  <!-- CREDENTIALS -->
+  <section id="credentials">
     <div class="grid g-2">
       <div class="card">
         <h2>Credentials & Training</h2>
         <ul>
           <li>Degrees & Certifications in Natural Health & Integrative Nutrition</li>
-          <li>American Association of Drugless Practitioners — Commission on Certification</li>
-          <li>Khemetian Yoga Instructor with years of teaching in community and private settings</li>
+          <li>American Association of Drugless Practitioners</li>
+          <li>Khemetian Yoga Instructor</li>
         </ul>
       </div>
 
       <div class="card">
         <h3>Focus Areas</h3>
         <ul>
-          <li>Nervous-system healing & breath retraining</li>
+          <li>Breath retraining</li>
           <li>Trauma-sensitive grounding</li>
-          <li>Khemetian postural geometry</li>
-          <li>Sound, drum, mantra & gentle ritual elements</li>
+          <li>Geometric postures</li>
         </ul>
       </div>
     </div>
   </section>
 
-
   <div class="divider"></div>
 
 
-
-  <!-- MEDITATION DOWNLOADS ------------------------------------ -->
-  <section id="downloads" style="padding:18px 0 10px;">
+  <!-- DOWNLOADS -->
+  <section id="downloads">
     <div class="card">
       <h2>Meditation Downloads</h2>
-      <p>Downloadable meditations for grounding, gentle transformation, feminine balance, and Orisha connection.</p>
-
       <ul>
-        <li>
-          <a href="https://drive.google.com/file/d/1JwdHv6Yw2xOU3ByVYkdoqIHSxJtkkuJG/view?usp=drive_link" target="_blank">
-            Yemojá Meditation — Water, Peace & Emotional Flow
-          </a>
-        </li>
-
-        <li>
-          <a href="https://drive.google.com/file/d/1TCJrh15RoZGXjxWAVpqvTYpQ8gJh36AR/view?usp=drive_link" target="_blank">
-            Butterfly Transformation Meditation — Renewal & Lightness
-          </a>
-        </li>
-
-        <li>
-          <a href="https://drive.google.com/file/d/1TTks12k0yRGHMyZOW1aWGOGOl-Vd0GfM/view?usp=drive_link" target="_blank">
-            Shango Meditation — Strength, Rhythm & Inner Fire
-          </a>
-        </li>
-
-        <li>
-          <a href="https://drive.google.com/file/d/1-RuIadxigTT9CRP1CMUGiAtCH1Wc_t0I/view?usp=drive_link" target="_blank">
-            Ilèkè Meditation — Adornment, Protection & Spiritual Grace
-          </a>
-        </li>
-
-        <li>
-          <a href="https://drive.google.com/file/d/1h4r4ifs3WIo8H_6azkwdcsuKE2pR5apX/view?usp=drive_link" target="_blank">
-            Obatalá Meditation — Clarity, Purity & Cool Mind
-          </a>
-        </li>
+        <li><a href="https://drive.google.com/file/d/1JwdHv6Yw2xOU3ByVYkdoqIHSxJtkkuJG/view?usp=drive_link">Yemojá Meditation</a></li>
+        <li><a href="https://drive.google.com/file/d/1TCJrh15RoZGXjxWAVpqvTYpQ8gJh36AR/view?usp=drive_link">Butterfly Meditation</a></li>
+        <li><a href="https://drive.google.com/file/d/1TTks12k0yRGHMyZOW1aWGOGOl-Vd0GfM/view?usp=drive_link">Shango Meditation</a></li>
+        <li><a href="https://drive.google.com/file/d/1-RuIadxigTT9CRP1CMUGiAtCH1Wc_t0I/view?usp=drive_link">Ilèkè Meditation</a></li>
+        <li><a href="https://drive.google.com/file/d/1h4r4ifs3WIo8H_6azkwdcsuKE2pR5apX/view?usp=drive_link">Obatalá Meditation</a></li>
       </ul>
-
-      <p class="tiny">These meditations open in a new tab. You may download the files directly from Google Drive.</p>
     </div>
   </section>
 
-
   <div class="divider"></div>
 
 
-
-  <!-- CONTACT -------------------------------------------------- -->
-  <section id="contact" style="padding:18px 0 10px;">
+  <!-- CONTACT -->
+  <section id="contact">
     <div class="grid g-2">
 
       <div class="card">
         <h2>Book or Ask</h2>
-        <p>For private sessions, group classes, or ceremonial work, send a message with your timezone and preferred days.</p>
-
-        <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn btn-primary" href="mailto:iya@qmmaat.com">Email: iya@qmmaat.com</a>
-          <a class="btn btn-ghost" href="https://qmmaat.com" target="_blank">Visit Website</a>
-        </div>
+        <p>For private sessions, group classes, or ceremonial work.</p>
+        <a class="btn btn-primary" href="mailto:iya@qmmaat.com">Email: iya@qmmaat.com</a>
       </div>
 
       <div class="card">
         <h3>Quick Contact Form</h3>
 
-        <!-- ⭐ GOOGLE FORM IFRAME EMBED ⭐ -->
+        <!-- ⭐ CORRECT GOOGLE FORM EMBED ⭐ -->
         <iframe 
           src="https://docs.google.com/forms/d/e/1FAIpQLSfVDMb_m7OJZVlWn8kRabUOEZExt7eCawZZLZaxwM0zEWS6DA/viewform?embedded=true"
           width="100%"
@@ -407,9 +269,8 @@
           marginwidth="0">
           Loading…
         </iframe>
-        <!-- ⭐ END IFRAME ⭐ -->
-
       </div>
+
     </div>
   </section>
 
@@ -419,28 +280,21 @@
 
 <footer class="wrap">
   <div class="divider"></div>
-  <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;">
-    <div>© <span id="y"></span> Queen Mother Maat — All rights reserved.</div>
-    <div>Priestess of Oya • Khemetian Yoga • Breathwork & Meditation</div>
+  <div style="display:flex; justify-content:space-between; flex-wrap:wrap;">
+    <div>© <span id="y"></span> Queen Mother Maat</div>
   </div>
 </footer>
 
 
-
 <script>
-// YEAR
 document.getElementById('y').textContent = new Date().getFullYear();
 
-// THEME TOGGLE
 const toggle = document.getElementById('themeToggle');
 const icon = document.getElementById('themeIcon');
 
 function updateIcon(){
-  if (document.documentElement.classList.contains('light')){
-    icon.textContent = '☀️';
-  } else {
-    icon.textContent = '🌙';
-  }
+  icon.textContent = document.documentElement.classList.contains('light')
+    ? "☀️" : "🌙";
 }
 updateIcon();
 
