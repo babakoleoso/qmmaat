@@ -3,46 +3,138 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>QMM & BSG — Astrological Compatibility</title>
+<title>QMM & BSG — Astrological Compatibility | SwamiG Institute</title>
 
 <style>
   :root{
     --bg:#faf7f2;
-    --ink:#222;
+    --ink:#222222;
     --muted:#6a6a6a;
-    --accent:#a569e0;
-    --accent2:#c58b00;
+    --accent:#a569e0;      /* SGI purple */
+    --accent2:#f4b000;     /* SGI gold */
     --card:#ffffff;
     --border:#e7e2da;
     --radius:18px;
     --max:1100px;
   }
 
+  *{box-sizing:border-box;}
+
   body{
     margin:0;
     background:var(--bg);
     color:var(--ink);
-    font-family:"Inter", sans-serif;
+    font-family:"Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     line-height:1.7;
     display:flex;
     justify-content:center;
   }
 
-  .wrap{
+  /* Top SGI bar */
+  .shell{
+    width:100%;
+    display:flex;
+    justify-content:center;
+  }
+
+  .page{
     width:100%;
     max-width:var(--max);
-    padding:40px 20px 80px;
   }
 
-  h1, h2, h3{
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 20px 8px;
+  }
+
+  header .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  header img.logo{
+    width:52px;
+    height:52px;
+    border-radius:999px;
+    box-shadow:0 2px 8px rgba(0,0,0,.20);
+  }
+
+  header .site-title{
+    font-weight:700;
+    font-size:1.1rem;
+  }
+
+  header .site-sub{
+    font-size:.8rem;
+    color:var(--muted);
+  }
+
+  nav{
+    display:flex;
+    gap:12px;
+    font-size:.85rem;
+  }
+
+  nav a{
+    text-decoration:none;
+    color:var(--muted);
+    padding:6px 10px;
+    border-radius:999px;
+    border:1px solid transparent;
+    transition:.25s ease;
+  }
+
+  nav a:hover{
+    border-color:var(--accent);
+    color:var(--accent);
+    background:#f4ecff;
+  }
+
+  .hero{
+    padding:10px 20px 30px;
     text-align:center;
+    animation:fadeUp .8s ease-out;
   }
 
-  h1{
+  .hero-eyebrow{
+    font-size:.85rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+
+  .hero h1{
     font-size:2.4rem;
-    font-weight:800;
+    margin:10px 0 4px;
     color:#b05d00;
-    margin-bottom:10px;
+  }
+
+  .hero .pair{
+    font-weight:600;
+  }
+
+  .hero p{
+    margin:8px auto 0;
+    max-width:640px;
+    color:var(--muted);
+  }
+
+  .hero .tagline{
+    margin-top:8px;
+    font-style:italic;
+    color:#7a5a00;
+  }
+
+  .wrap{
+    padding:0 20px 80px;
+    animation:fadeUp .9s ease-out;
+  }
+
+  h2, h3{
+    text-align:center;
   }
 
   h2{
@@ -64,154 +156,250 @@
     margin:25px 0;
     border:1px solid var(--border);
     box-shadow:0 3px 14px rgba(0,0,0,.05);
+    animation:fadeUp 1s ease-out;
   }
 
-  img{
+  img.main-img{
     max-width:100%;
     border-radius:10px;
     display:block;
     margin:25px auto;
     box-shadow:0 4px 12px rgba(0,0,0,.08);
+    animation:fadeUp 1s ease-out;
+  }
+
+  ul{
+    padding-left:1.1rem;
   }
 
   footer{
-    margin-top:60px;
-    opacity:0.55;
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid var(--border);
     text-align:center;
-    font-size:0.85rem;
+    font-size:0.8rem;
     color:var(--muted);
+    opacity:0.75;
   }
 
+  /* Soft fade-up animation */
+  @keyframes fadeUp{
+    from{
+      opacity:0;
+      transform:translateY(12px);
+    }
+    to{
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
+
+  @media (max-width:720px){
+    header{
+      flex-direction:column;
+      gap:10px;
+      align-items:flex-start;
+    }
+    nav{
+      flex-wrap:wrap;
+      justify-content:flex-start;
+    }
+  }
 </style>
 </head>
 
 <body>
-<div class="wrap">
+<div class="shell">
+  <div class="page">
 
-  <h1>Queen Mother Maat & Baba SwamiG</h1>
-  <div style="text-align:center; margin-bottom:25px; color:#7a5a00;">
-    Natal Chart Astrological Compatibility Report
+    <!-- SGI HEADER -->
+    <header>
+      <div class="brand">
+        <img src="SwamiG.gif" alt="SwamiG Institute Logo" class="logo" />
+        <div>
+          <div class="site-title">SwamiG Institute</div>
+          <div class="site-sub">Ifá • Isése? • Orisha — Spiritual Education & Divination</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#">Mission</a>
+        <a href="#">Divination</a>
+        <a href="#">Courses</a>
+        <a href="#">Initiations</a>
+        <a href="#">Support SGI</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-eyebrow">Astrological Compatibility Report</div>
+      <h1><span class="pair">Queen Mother Maat &amp; Baba SwamiG</span></h1>
+      <p>
+        A synastry and polarity analysis using natal charts to evaluate Sun–Moon resonance,
+        Venus–Mars chemistry, Rising sign rapport, and karmic indicators.
+      </p>
+      <p class="tagline">
+        When Cancer and Capricorn Moon meet, the Moon finds its mountain and the mountain finds its tide.
+      </p>
+    </section>
+
+    <div class="wrap">
+
+      <!-- RED-BORDER CHART COMPARISON -->
+      <h2>Individual Foundations — Red Pair</h2>
+      <img src="sideby.png"
+           alt="Red Border Chart Comparison"
+           class="main-img" />
+
+      <div class="card">
+        <h3>What the Red Pair Reveals</h3>
+        <p>
+          The red-bordered images show each natal chart with full aspect tables. This level reveals
+          the <b>internal architecture</b> of each soul before they are brought into relationship.
+        </p>
+        <p><b>QMM</b> (left) carries:</p>
+        <ul>
+          <li><b>Sun in Sagittarius</b> — philosophical, expansive, truth-seeking.</li>
+          <li><b>Moon in Capricorn</b> — emotionally disciplined, responsible, structured.</li>
+          <li><b>Rising Virgo</b> — analytical, service-oriented, healing-focused.</li>
+          <li><b>Venus in Scorpio, Mars in Pisces</b> — deep bonds, spiritualized passion.</li>
+        </ul>
+        <p><b>BSG</b> (right) carries:</p>
+        <ul>
+          <li><b>Sun in Cancer</b> — protective, nurturing, clan-centered.</li>
+          <li><b>Moon in Taurus</b> — steady, sensual, comfort-seeking.</li>
+          <li><b>Rising Gemini</b> — communicative, quick, versatile.</li>
+          <li><b>Venus & Mars in Leo</b> — generous, expressive, royal-hearted fire.</li>
+        </ul>
+        <p>
+          This pair makes it clear who they are independently: QMM as <b>structured mystic and healer</b>,
+          BSG as <b>nurturing leader and heart-centered fire</b>. Compatibility begins with this foundation.
+        </p>
+      </div>
+
+      <!-- -90 Degree CLOCK-WISE ROTATION CHART COMPARISON -->
+      <h2>Relational Dynamics </h2>
+      <img src="90degrees.png"
+           alt="Yellow Border Relation Chart"
+           class="main-img" />
+
+      <div class="card">
+        <h3>How the 90 Degree Rotation Shows Ideal Compatibility</h3>
+        <p>
+          In the 90 Degree Rotation, the charts are simplified and placed in a direct
+          relationship with each other. Here, the most important compatibilities become obvious:
+        </p>
+        <ul>
+          <li>
+            <b>Sun–Moon Polarity:</b> QMM’s <b>Moon in Capricorn</b> opposes BSG’s <b>Sun in Cancer</b>.
+            Cancer–Capricorn is one of astrology’s classic <b>“ideal partner” axes</b>, blending
+            emotional nurturing (Cancer) with structure and responsibility (Capricorn).
+          </li>
+          <li>
+            <b>Venus–Mars Cross-Activation:</b> QMM’s <b>Venus in Scorpio</b> engages BSG’s
+            <b>Mars in Leo</b>, while BSG’s <b>Venus in Leo</b> interacts with QMM’s
+            <b>Mars in Pisces</b>. These fixed and water–fire combinations create
+            <b>strong attraction, creativity, and transformative intimacy</b>.
+          </li>
+          <li>
+            <b>Mercury-Ruled Rising Signs:</b> Virgo (QMM) and Gemini (BSG) are both ruled by Mercury,
+            signaling a relationship built on <b>conversation, analysis, and shared ideas</b>.
+          </li>
+        </ul>
+        <p>
+          This pair visually confirms that their charts are not merely compatible —
+          they <b>complete</b> each other through opposition, polarity, and shared rulerships.
+        </p>
+      </div>
+
+      <!-- DUAL WHEEL IMAGE -->
+      <h2>Dual Chart Wheel</h2>
+      <img src="90degrees.png" alt="Dual Chart Wheel" class="main-img" />
+      <div class="card">
+        <p>
+          The dual wheel illustrates how planets are distributed between signs and houses in relation
+          to one another. We see how one chart fills the gaps of the other, creating a shared field of
+          purpose. The Cancer–Capricorn axis becomes the spine of the connection, while the fixed
+          Scorpio–Leo energy anchors devotion and loyalty.
+        </p>
+      </div>
+
+      <!-- INDIVIDUAL CHARTS -->
+      <h2>Individual Natal Wheels</h2>
+      <img src="qmmnatal.gif" alt="QMM Natal Chart" class="main-img" />
+      <img src="bsgnatal.gif" alt="BSG Natal Chart" class="main-img" />
+      <div class="card">
+        <p>
+          Side-by-side, we see QMM’s chart leaning into Saturnian and Neptunian themes
+          (discipline + mysticism), while BSG’s chart amplifies Lunar and Leonine energy
+          (caregiving + radiance). Together they form a pattern of
+          <b>structure supporting nurture</b> — ideal for spiritual leadership, teaching,
+          and communal guardianship.
+        </p>
+      </div>
+
+      <!-- COMPARISON TABLES -->
+      <h2>Core Planetary Comparison</h2>
+      <img src="table1.png" alt="Planetary Comparison Table" class="main-img" />
+      <img src="table2.png" alt="Planetary Complement Table" class="main-img" />
+      <div class="card">
+        <h3>Summary of the Main Axes</h3>
+        <ul>
+          <li><b>Sun vs. Moon:</b> Cancer Sun / Capricorn Moon - emotional–structural axis.</li>
+          <li><b>Moon vs. Sun:</b> Taurus Moon / Sagittarius Sun - comfort vs. quest, grounding the visionary.</li>
+          <li><b>Venus–Mars:</b> Scorpio–Leo and Leo–Pisces - intense passion, sacred play, spiritual eros.</li>
+          <li><b>Rising Signs:</b> Virgo & Gemini - Mercury channels for teaching, writing, speaking, and analysis.</li>
+        </ul>
+        <p>
+          These pairings meet classical synastry standards for <b>ideal compatibility</b>:
+          there is complementarity rather than sameness, polarity rather than duplication,
+          and enough shared rulerships to keep communication strong.
+        </p>
+      </div>
+
+      <!-- KARMIC & DESTINY THEMES -->
+      <h2>Karmic & Destiny Themes</h2>
+      <div class="card">
+        <h3>Saturn, Nodes, and Sacred Obligation</h3>
+        <p>
+          The Cancer–Capricorn axis is traditionally associated with <b>ancestry, lineage, and duty</b>.
+          When a couple shares this axis strongly, it often indicates that the relationship itself is
+          <b>in service to a larger community or spiritual mission</b>. Saturn’s influence adds a sense of
+          commitment and long-term responsibility — not just to each other, but to the people they teach
+          and protect.
+        </p>
+        <p>
+          Node and Saturn contacts in synastry commonly point to a <b>karmic contract</b>. QMM and BSG’s
+          charts suggest that part of their agreement is to weave <b>structured wisdom (Capricorn)</b> with
+          <b>ancestral care and spiritual mothering (Cancer)</b>, which mirrors the work of SGI itself.
+        </p>
+
+        <h3>Composite Energy — The Relationship as a Being</h3>
+        <p>
+          When their energies are blended, the “third entity” of the relationship resembles a
+          <b>teacher–healer archetype</b>: grounded yet empathetic, disciplined yet nurturing. This
+          composite field is well-suited for leading initiations, guiding Iyawos, and holding
+          space for transformation within a temple or institute setting.
+        </p>
+
+        <h3>Overall Destiny Statement</h3>
+        <p>
+          Taken together, the Sun–Moon opposition, Mercury-ruled Rising signs, Venus–Mars cross-links,
+          and karmic axis emphasis all describe a union that is:
+        </p>
+        <ul>
+          <li><b>Personally supportive</b> — each balances the other’s emotional needs.</li>
+          <li><b>Vocationally aligned</b> — shared teaching, healing, and leadership.</li>
+          <li><b>Spiritually purposeful</b> — a relationship that exists to serve a larger sacred work.</li>
+        </ul>
+      </div>
+
+      <footer>
+        © SwamiG Institute — QMM &amp; BSG Natal Chart Compatibility Report
+      </footer>
+
+    </div>
   </div>
-
-  <!-- RED-BORDER CHART COMPARISON -->
-  <h2>Initial Chart Comparison (Red Border Pair)</h2>
-  <img src="sideby.png" alt="Red Border Chart">
-
-  <div class="card">
-    <h3>Why This Pair Matters</h3>
-    <p>
-      The red-bordered pair displays each individual's natal chart in full detail.  
-      This allows examination of the <b>internal structure</b> of each person before judging compatibility.
-    </p>
-
-    <p>
-      These charts reveal the essential qualities:
-    </p>
-    <ul>
-      <li><b>Sun</b>: identity, life path</li>
-      <li><b>Moon</b>: emotional body</li>
-      <li><b>Rising sign</b>: how each meets the world</li>
-      <li><b>Venus & Mars</b>: romantic polarity and chemistry</li>
-    </ul>
-
-    <p>
-      Understanding each chart independently is essential before pairing them together.  
-      This pair establishes the <b>raw energetic signatures</b> of QMM and BSG.
-    </p>
-  </div>
-
-
-  <!-- YELLOW-BORDER CHART COMPARISON -->
-  <h2>Relational Comparison (Yellow Border Pair)</h2>
-  <img src="90degrees.png" alt="Yellow Border Relation Chart">
-
-  <div class="card">
-    <h3>Why This Pair Is Crucial</h3>
-    <p>
-      The yellow-bordered pair shows the charts side-by-side in a simplified relational format.  
-      This makes it easy to see <b>interplay, polarity, and complementarity</b>.
-    </p>
-
-    <p>The most important compatibility insights become visible:</p>
-
-    <ul>
-      <li><b>QMM Moon Capricorn - BSG Sun Cancer</b>  
-        Classic <b>ideal opposition</b>, the strongest long-term pairing.
-      </li>
-
-      <li><b>Venus–Mars polarity</b> (Scorpio–Leo and Leo–Pisces)  
-         Deep attraction, powerful creativity, spiritual and erotic magnetism.
-      </li>
-
-      <li><b>Virgo Rising  Gemini Rising</b>  
-         Both Mercury-ruled  communication is smooth, natural, and intuitive.
-      </li>
-    </ul>
-
-    <p>
-      This pair visually demonstrates that QMM and BSG form a <b>balanced polarity system</b>,  
-      fulfilling classical astrological criteria for <b>ideal compatibility</b>.
-    </p>
-  </div>
-
-
-  <!-- DUAL WHEEL IMAGE -->
-  <h2>Dual Chart Wheel</h2>
-  <img src="90degrees.png" alt="Dual Chart Wheel">
-
-  <div class="card">
-    <p>
-      The dual chart provides a combined energetic overview.  
-      You can see how the planets cluster, how each person fills the other's empty houses,  
-      and how oppositions create <b>stability, attraction, and karmic symmetry</b>.
-    </p>
-  </div>
-
-
-  <!-- INDIVIDUAL CHARTS -->
-  <h2>Individual Natal Wheels</h2>
-  <img src="qmmnatal.gif" alt="QMM Natal Chart">
-  <img src="bsgnatal.gif" alt="BSG Natal Chart">
-
-  <div class="card">
-    <p>
-      Side-by-side comparison shows QMM’s chart is more Saturn–Neptune oriented,  
-      while BSG’s chart is strongly Lunar–Venusian.  
-      Together this produces <b>structure + nurturing</b>,  
-      a deeply supportive energetic cycle.
-    </p>
-  </div>
-
-
-  <!-- COMPARISON TABLES -->
-  <h2>Core Planetary Comparison Tables</h2>
-
-  <img src="table1.png" alt="Planetary Comparison Table">
-  <img src="table2.png" alt="Planetary Complement Table">
-
-  <div class="card">
-    <p>
-      These tables visualize the key compatibility markers:
-    </p>
-    <ul>
-      <li><b>Sun - Moon polarity</b></li>
-      <li><b>Venus - Mars pairing</b></li>
-      <li><b>Earth–Water emotional grounding</b></li>
-      <li><b>Fire–Water spiritual activation</b></li>
-      <li><b>Mercury-based Rising signs - effortless dialogue</b></li>
-    </ul>
-
-    <p>
-      Together, these reveal a relationship built on  
-      <b>emotional resonance, karmic symmetry, passion, communication, and spiritual complementarity</b>.
-    </p>
-  </div>
-
-
-  <footer>
-    © Natal Chart Compatibility Report — SwamiG Institute
-  </footer>
-
 </div>
 </body>
 </html>
