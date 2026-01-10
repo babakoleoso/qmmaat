@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f6f2fb" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Queen Mother Maat — Priestess of Oya | Khemetian Yoga, Breathwork & Guided Meditations</title>
+
+  <!-- UPDATED SEO DESCRIPTION (Benin section included) -->
+  <meta name="description" content="Queen Mother Maat — Priestess of Oya. Khemetian Yoga, Breathwork, Meditation, Spiritual Alignment Sessions, and a Benin journey archive honoring lineage, ceremony, and ancestral return." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+  /**************************************
+    QMM — LIGHT THEME (Purple/Gold)
+    Works as a single-file static page.
+  **************************************/
+  :root{
+    --bg:#f6f2fb;
+    --ink:#1f1a2e;
+    --muted:#6d6680;
+    --card:rgba(255,255,255,.92);
+    --soft:rgba(255,255,255,.60);
+    --border:rgba(31,26,46,.10);
+    --accent:#8a6cff;     /* royal amethyst */
+    --accent2:#ffd166;    /* warm gold */
+    --ring:rgba(138,108,255,.28);
+    --ok:#25b37a;
+    --warn:#b7791f;
+
+    --radius:22px;
+    --shadow: 0 18px 60px rgba(26,18,52,.14);
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    background:
+      radial-gradient(1200px 700px at 18% 10%, rgba(138,108,255,.18), transparent 55%),
+      radial-gradient(900px 540px at 84% 20%, rgba(255,209,102,.20), transparent 55%),
+      radial-gradient(900px 540px at 40% 95%, rgba(138,108,255,.10), transparent 55%),
+      var(--bg);
+    color:var(--ink);
+  }
+  a{color:inherit;text-decoration:none}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+  .shell{
+    max-width:1200px;
+    margin:0 auto;
+    padding:28px 18px 70px;
+  }
+
+  /* TOP NAV */
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    padding:14px 14px;
+    border:1px solid var(--border);
+    background:linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,.55));
+    border-radius:999px;
+    box-shadow:0 10px 30px rgba(26,18,52,.10);
+    backdrop-filter: blur(10px);
+  }
+  .brand{
+    display:flex;align-items:center;gap:12px; min-width:220px;
+  }
+  .logo{
+    width:44px;height:44px;border-radius:999px;
+    box-shadow:0 10px 22px rgba(26,18,52,.18);
+    border:1px solid rgba(0,0,0,.05);
+    animation: floatLogo 6.5s ease-in-out infinite;
+  }
+  @keyframes floatLogo{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-3px)}
+  }
+  .brand .title{
+    font-weight:800;
+    letter-spacing:.02em;
+    font-size:14px;
+    line-height:1.1;
+  }
+  .brand .sub{
+    font-size:12px;color:var(--muted);
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    margin-top:2px;
+  }
+  .navlinks{
+    display:flex;flex-wrap:wrap;gap:8px; justify-content:center;
+  }
+  .pill{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:10px 14px;
+    border-radius:999px;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.60);
+    box-shadow:0 10px 26px rgba(26,18,52,.08);
+    font-weight:600;
+    font-size:13px;
+    transition:transform .2s ease, box-shadow .2s ease;
+    white-space:nowrap;
+  }
+  .pill:hover{transform:translateY(-1px); box-shadow:0 14px 34px rgba(26,18,52,.12)}
+  .pill .dot{
+    width:10px;height:10px;border-radius:999px;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    box-shadow:0 0 0 4px rgba(138,108,255,.14);
+  }
+
+  /* HERO */
+  .hero{
+    margin-top:22px;
+    border-radius:var(--radius);
+    border:1px solid var(--border);
+    background:
+      radial-gradient(900px 420px at 10% 10%, rgba(138,108,255,.24), transparent 55%),
+      radial-gradient(820px 420px at 92% 24%, rgba(255,209,102,.22), transparent 55%),
+      linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.62));
+    box-shadow: var(--shadow);
+    overflow:hidden;
+    position:relative;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:-60px -60px auto auto;
+    width:220px;height:220px;border-radius:50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255,209,102,.45), transparent 62%);
+    filter: blur(2px);
+    opacity:.85;
+    animation: glow 7s ease-in-out infinite;
+    pointer-events:none;
+  }
+  @keyframes glow{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.08)}
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns: 1.12fr .88fr;
+    gap:22px;
+    padding:34px 26px 26px;
+    align-items:center;
+  }
+  @media (max-width: 940px){
+    .hero-inner{grid-template-columns:1fr; padding:28px 18px}
+  }
+  .kicker{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:8px 12px;
+    border-radius:999px;
+    border:1px solid rgba(138,108,255,.22);
+    background:rgba(138,108,255,.10);
+    color:#3b2a73;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    font-size:12px;
+  }
+  .kicker .spark{
+    width:9px;height:9px;border-radius:999px;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    box-shadow:0 0 0 5px rgba(255,209,102,.18);
+  }
+  h1{
+    font-family: "Libre Baskerville", "Noto Serif", Georgia, serif;
+    font-size:42px;
+    line-height:1.12;
+    margin:14px 0 10px;
+    letter-spacing:.01em;
+  }
+  .lead{
+    color:var(--muted);
+    font-size:16px;
+    margin:0 0 18px;
+    max-width:64ch;
+  }
+  .cta{
+    display:flex;flex-wrap:wrap;gap:10px; align-items:center;
+    margin-top:14px;
+  }
+  .btn{
+    border:1px solid var(--border);
+    padding:12px 14px;
+    border-radius:14px;
+    background:rgba(255,255,255,.70);
+    box-shadow:0 12px 30px rgba(26,18,52,.10);
+    font-weight:800;
+    font-size:14px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px); box-shadow:0 16px 38px rgba(26,18,52,.14)}
+  .btn-primary{
+    background:linear-gradient(135deg,var(--accent), #b37bff);
+    border-color:rgba(138,108,255,.25);
+    color:white;
+  }
+  .btn-ghost{
+    background:rgba(255,255,255,.55);
+  }
+
+  /* HERO MEDIA CARD */
+  .mediaCard{
+    border-radius:18px;
+    border:1px solid rgba(31,26,46,.10);
+    background:rgba(255,255,255,.55);
+    overflow:hidden;
+    box-shadow:0 12px 34px rgba(26,18,52,.12);
+  }
+  .mediaCard .imgWrap{
+    background:linear-gradient(135deg, rgba(138,108,255,.10), rgba(255,209,102,.14));
+    padding:16px;
+  }
+  .mediaCard img{
+    width:100%;
+    display:block;
+    border-radius:16px;
+    border:1px solid rgba(0,0,0,.06);
+    box-shadow:0 14px 30px rgba(26,18,52,.12);
+  }
+  .mediaCard .meta{
+    padding:16px 16px 18px;
+  }
+  .meta .name{
+    font-weight:900;
+    font-size:14px;
+    letter-spacing:.02em;
+  }
+  .meta .tag{
+    color:var(--muted);
+    font-size:13px;
+    margin-top:4px;
+  }
+  .meta .line{
+    margin-top:12px;
+    border-top:1px solid rgba(31,26,46,.10);
+    padding-top:12px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .chip{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 10px;
+    border-radius:999px;
+    border:1px solid rgba(31,26,46,.10);
+    background:rgba(255,255,255,.62);
+    font-weight:700;
+    font-size:12px;
+    white-space:nowrap;
+  }
+  .chip i{
+    width:10px;height:10px;border-radius:999px;
+    background:linear-gradient(135deg,var(--accent2),var(--accent));
+    box-shadow:0 0 0 4px rgba(138,108,255,.12);
+  }
+
+  /* SECTIONS */
+  .section{
+    margin-top:28px;
+    border-radius:var(--radius);
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.70);
+    box-shadow:0 14px 42px rgba(26,18,52,.10);
+    padding:22px;
+  }
+  .section h2{
+    font-family:"Libre Baskerville","Noto Serif",serif;
+    font-size:24px;
+    margin:0 0 10px;
+  }
+  .section p{margin:10px 0;color:var(--muted)}
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:14px;
+    margin-top:14px;
+  }
+  @media (max-width: 920px){ .grid{grid-template-columns:1fr} }
+  .card{
+    padding:16px;
+    border-radius:18px;
+    border:1px solid rgba(31,26,46,.10);
+    background:rgba(255,255,255,.72);
+    box-shadow:0 12px 26px rgba(26,18,52,.08);
+    transition:transform .15s ease;
+  }
+  .card:hover{transform:translateY(-1px)}
+  .card h3{
+    margin:0 0 6px;
+    font-size:15px;
+    letter-spacing:.02em;
+  }
+  .tiny{font-size:12px;color:rgba(31,26,46,.55)}
+  .divider{
+    height:1px;
+    background:linear-gradient(90deg, transparent, rgba(31,26,46,.16), transparent);
+    margin:26px 6px;
+  }
+
+  /* BENIN AREA */
+  .benin-wrap{
+    display:grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap:16px;
+    align-items:start;
+    margin-top:14px;
+  }
+  @media (max-width: 940px){ .benin-wrap{grid-template-columns:1fr} }
+  .videoFrame{
+    border-radius:18px;
+    border:1px solid rgba(31,26,46,.10);
+    background:rgba(255,255,255,.62);
+    box-shadow:0 12px 28px rgba(26,18,52,.10);
+    padding:12px;
+  }
+  video{
+    width:100%;
+    border-radius:14px;
+    display:block;
+    outline:1px solid rgba(0,0,0,.06);
+    background:#000;
+  }
+  .benin-actions{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .benin-actions .btn{width:100%; justify-content:center; text-align:center}
+
+  .benin-gallery{
+    margin-top:18px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:14px;
+  }
+  .benin-gallery img{
+    width:100%;
+    border-radius:16px;
+    box-shadow:0 12px 26px rgba(0,0,0,.15);
+    outline:1px solid rgba(0,0,0,.06);
+    object-fit:cover;
+    aspect-ratio: 4/3;
+  }
+
+  /* BARELY VISIBLE FOOTER */
+  footer{
+    margin-top:38px;
+    text-align:center;
+    opacity:.22;
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    padding:10px 0 0;
+    user-select:none;
+  }
+  footer a{opacity:.7}
+  footer a:hover{opacity:1}
+
+  </style>
+</head>
+
+<body>
+  <div class="shell">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="brand">
+        <img class="logo" src="SwamiG.gif" alt="SwamiG Institute" />
+        <div>
+          <div class="title">Queen Mother Maat</div>
+          <div class="sub">Priestess of Oya</div>
+        </div>
+      </div>
+
+      <div class="navlinks">
+        <a class="pill" href="#downloads"><span class="dot"></span> Meditation Downloads</a>
+        <a class="pill" href="#sessions"><span class="dot"></span> Sessions</a>
+        <a class="pill" href="#benin"><span class="dot"></span> Benin Journey</a>
+        <a class="pill" href="#contact"><span class="dot"></span> Contact</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="kicker"><span class="spark"></span> Breathwork • Meditation • Khemetian Yoga</div>
+          <h1>Guided Alignment for Peace, Power, and Clarity.</h1>
+          <p class="lead">
+            Queen Mother Maat offers gentle, powerful sessions that weave breathwork, Khemetian yoga,
+            guided meditation, and spiritual alignment—supporting clarity, cleansing, and reconnection.
+          </p>
+
+          <div class="cta">
+            <a class="btn btn-primary" href="#downloads">Start with Downloads</a>
+            <a class="btn btn-ghost" href="mailto:iya@qmmaat.com">Email: iya@qmmaat.com</a>
+          </div>
+        </div>
+
+        <aside class="mediaCard">
+          <div class="imgWrap">
+            <!-- If you have a preferred hero image, replace "bsgnatal.gif" with it -->
+            <img src="bsgnatal.gif" alt="Queen Mother Maat — Visual" />
+          </div>
+          <div class="meta">
+            <div class="name">Queen Mother Maat</div>
+            <div class="tag">Priestess of Oya · Breathwork · Meditation · Khemetian Yoga</div>
+            <div class="line">
+              <span class="chip"><i></i> Sacred Breath</span>
+              <span class="chip"><i></i> Devotion</span>
+              <span class="chip"><i></i> Clarity</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- DOWNLOADS -->
+    <section class="section" id="downloads">
+      <h2>Meditation Downloads</h2>
+      <p>Choose a guided meditation. These links open or download directly from this page folder.</p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Yemojah Meditation</h3>
+          <p class="tiny">Water · Healing · Emotional renewal</p>
+          <a class="btn" href="https://drive.google.com/file/d/1JwdHv6Yw2xOU3ByVYkdoqIHSxJtkkuJG/view?usp=drive_link" target="_blank" rel="noopener">Open Link</a>
+        </div>
+
+        <div class="card">
+          <h3>Butterfly Meditation</h3>
+          <p class="tiny">Transformation · Grace · Lightness</p>
+          <a class="btn" href="https://drive.google.com/file/d/1TCJrh15RoZGXjxWAVpqvTYpQ8gJh36AR/view?usp=drive_link" target="_blank" rel="noopener">Open Link</a>
+        </div>
+
+        <div class="card">
+          <h3>Shango Meditation</h3>
+          <p class="tiny">Fire · Will · Power alignment</p>
+          <a class="btn" href="https://drive.google.com/file/d/1TTks12k0yRGHMyZOW1aWGOGOl-Vd0GfM/view?usp=drive_link" target="_blank" rel="noopener">Open Link</a>
+        </div>
+
+        <div class="card">
+          <h3>Ileke Meditation</h3>
+          <p class="tiny">Authority · Devotion · Spiritual identity</p>
+          <a class="btn" href="https://drive.google.com/file/d/1-RuIadxigTT9CRP1CMUGiAtCH1Wc_t0I/view?usp=drive_link" target="_blank" rel="noopener">Open Link</a>
+        </div>
+
+        <div class="card">
+          <h3>Obatala Meditation</h3>
+          <p class="tiny">Purity · Calm mind · White light</p>
+          <a class="btn" href="https://drive.google.com/file/d/1h4r4ifs3WIo8H_6azkwdcsuKE2pR5apX/view?usp=drive_link" target="_blank" rel="noopener">Open Link</a>
+        </div>
+
+        <div class="card">
+          <h3>IoWLH Chakra (MP3 in Repo)</h3>
+          <p class="tiny">Your local downloadable MP3 file</p>
+          <a class="btn btn-primary" href="2026-IoWLH-Chakra.mp3" download>Download MP3</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SESSIONS -->
+    <section class="section" id="sessions">
+      <h2>Spiritual Alignment Sessions</h2>
+      <p>
+        Sessions are offered with care and discretion. Reach out by email to request scheduling,
+        session focus, or pricing.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Breathwork Reset</h3>
+          <p class="tiny">Nervous system calming · Grounding · Emotional clearing</p>
+        </div>
+        <div class="card">
+          <h3>Guided Meditation</h3>
+          <p class="tiny">Inner stillness · Focus · Reconnection to purpose</p>
+        </div>
+        <div class="card">
+          <h3>Khemetian Yoga Flow</h3>
+          <p class="tiny">Posture · Breath · Energetic alignment</p>
+        </div>
+      </div>
+
+      <div class="cta" style="margin-top:18px;">
+        <a class="btn btn-primary" href="mailto:iya@qmmaat.com">Request a Session</a>
+        <a class="btn btn-ghost" href="#contact">Contact Details</a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- =======================================================
+         BENIN JOURNEY (VIDEO + PICS + LINK TO FULL PPT)
+         Files to add to your GitHub repo folder:
+           QMM_Benin_Featured_Slideshow.mp4   (featured video)
+           Queen_Mother_Maat_Benin_2026_FIXED.pptx (full deck)
+           benin1.jpg benin2.jpg benin3.jpg ... (optional)
+         Tip: If you don't have benin1.jpg etc yet, delete the gallery <img> tags.
+    ======================================================== -->
+    <section class="section" id="benin">
+      <h2>Benin Journey Archive</h2>
+      <p>
+        A living record of ancestral return — honoring lineage, ceremony, and sacred memory.
+        Watch the featured video, then download the full Benin deck when you’re ready.
+      </p>
+
+      <div class="benin-wrap">
+        <div class="videoFrame">
+          <video controls preload="metadata">
+            <source src="QMM_Benin_Featured_Slideshow_REBUILT.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p class="tiny" style="margin:10px 6px 2px;">
+            Featured: Benin journey highlights (MP4). Place the MP4 in the same repo folder as this page.
+          </p>
+        </div>
+
+        <div class="benin-actions">
+          <a class="btn btn-primary" href="Queen_Mother_Maat_Benin_2026_FIXED.pptx" download>
+            Download Full Benin Slide Deck (PPTX)
+          </a>
+          <a class="btn btn-ghost" href="QMM_Benin_Featured_Slideshow-1.pptx" download>
+            Download Alternate Deck (PPTX)
+          </a>
+          <a class="btn btn-ghost" href="QMM_Benin_Featured_Slideshow_REBUILT.mp4" download>
+            Download Video (MP4)
+          </a>
+        </div>
+      </div>
+
+      <!-- OPTIONAL PHOTO GALLERY
+           Replace these filenames with YOUR actual photo filenames in the repo.
+           If you do not have these images uploaded yet, you can remove this block safely.
+      -->
+      <div class="benin-gallery" aria-label="Benin photo highlights">
+        <img src="benin6.jpg" alt="Benin journey photo highlight 6" loading="lazy">
+        <img src="benin7.jpg" alt="Benin journey photo highlight 7" loading="lazy">
+        <img src="benin8.jpg" alt="Benin journey photo highlight 8" loading="lazy">
+        <img src="benin9.jpg" alt="Benin journey photo highlight 9" loading="lazy">
+        <img src="benin10.jpg" alt="Benin journey photo highlight 10" loading="lazy">
+        <img src="benin11.jpg" alt="Benin journey photo highlight 11" loading="lazy">
+        <img src="benin12.jpg" alt="Benin journey photo highlight 12" loading="lazy">
+        <img src="benin13.jpg" alt="Benin journey photo highlight 13" loading="lazy">
+        <img src="benin14.jpg" alt="Benin journey photo highlight 14" loading="lazy">
+        <img src="benin15.jpg" alt="Benin journey photo highlight 15" loading="lazy">
+        <img src="benin16.jpg" alt="Benin journey photo highlight 16" loading="lazy">
+        <img src="benin17.jpg" alt="Benin journey photo highlight 17" loading="lazy">
+        <img src="benin18.jpg" alt="Benin journey photo highlight 18" loading="lazy">
+        <img src="benin19.jpg" alt="Benin journey photo highlight 19" loading="lazy">
+        <img src="benin20.jpg" alt="Benin journey photo highlight 20" loading="lazy">
+        <img src="benin21.jpg" alt="Benin journey photo highlight 21" loading="lazy">
+        <img src="benin22.jpg" alt="Benin journey photo highlight 22" loading="lazy">
+        <img src="benin23.jpg" alt="Benin journey photo highlight 23" loading="lazy">
+        <img src="benin24.jpg" alt="Benin journey photo highlight 24" loading="lazy">
+      </div>
+
+      <p class="tiny" style="margin-top:12px;">
+        Tip: Keep the video + PPT in the same GitHub folder as this page so the links never break.
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email for sessions, questions, or collaboration:
+        <b><a href="mailto:iya@qmmaat.com">iya@qmmaat.com</a></b>
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Direct Email</h3>
+          <p class="tiny">Best for scheduling & private inquiries.</p>
+          <a class="btn btn-primary" href="mailto:iya@qmmaat.com">Send Email</a>
+        </div>
+        <div class="card">
+          <h3>Meditation Downloads</h3>
+          <p class="tiny">Return to the download library.</p>
+          <a class="btn" href="#downloads">View Downloads</a>
+        </div>
+        <div class="card">
+          <h3>Benin Archive</h3>
+          <p class="tiny">Watch the video & view the photos.</p>
+          <a class="btn" href="#benin">Go to Benin</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BARELY VISIBLE FOOTER -->
+    <footer>
+      Governed by Tehuti (+) Irete
+      &nbsp;·&nbsp;
+      <a href="https://drive.google.com/drive/folders/1bVzf_Pe4I_Nm7LMLnqTemgdsipjCUkA7" target="_blank" rel="noopener">Oya</a>
+    </footer>
+
+  </div>
+</body>
+</html>
